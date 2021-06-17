@@ -1,0 +1,106 @@
+#单位
+oss:
+  fileSize: 10485760
+  accessKeyId: OSS_ACCESS_ID
+  accessKeySecret: OSS_ACCESS_SECRET
+  bucketName: your-bucket
+  endpoint: your-oss.aliyuncs.com
+  url: https://one-stand.oss-cn-shanghai.aliyuncs.com/
+  #内网域名
+  intranetUrl: https://one-stand.oss-cn-shanghai-internal.aliyuncs.com/
+
+#微信登录
+wx:
+  #微信登陆获取二维码的url
+  url: https://api.weixin.qq.com/sns/jscode2session
+  #获取太阳码
+  two_code: https://api.weixin.qq.com/wxa/getwxacodeunlimit?access_token=
+  pc:
+    #微信登陆获取二维码的url
+    login_img_url: https://open.weixin.qq.com/connect/qrconnect
+    #微信验证url
+    login_oauth2_url: https://api.weixin.qq.com/sns/oauth2/access_token
+    response_type: code
+    state: crmpc
+    grant_type: authorization_code
+
+  #微信支付
+wxpay:
+  notifyUrl: https://api.yiliit.com/userApi/orders/paymentOrders
+  refundUrl: https://api.yiliit.com/crmApi/orders/backRefund
+  crmPcBackUrl: https://api.yiliit.com/crmPc/companyGoods/payment
+  wapUrl: http://crm.yiliit.com
+
+# 第三方平台的appid和secret,  user.bill 和 crm.bill 没用了，可以不用管。
+component:
+  appid: WX_APPID
+  secret: WX_APPSECRET
+  user:
+    bill: 5RBrkcLviv3S6dmQ3YuXNfntscKUy0IN/6fekCyXAqa3EODuXWFcYs7Q86sZV/Lefv68VrbVyYHFmWwtDAU+S/lkcJDPToRYuGk
+  crm:
+    bill: XvdkrAR/T9kufl5UMIAysbXYYHPmzRF3R+XVjsoE84lU1Loh9MdWpUMT2+2D6vFmcaLGZRkETln9f+XnW5sDez8HAWNEyPADF2Q
+  messagekey: WX_MESSAGE_KEY
+  token: WX_TOKEN
+  redirect_uri: http://crm.yiliit.com/main/programManagement.html
+
+# 短信
+sms:
+  accountKeyId: SMS_ACCESS_ID
+  accessKeySecret: SMS_ACCESS_KEY
+  outId: outId
+  signName: SMS_LABEL
+
+
+  #名片海报路径
+card:
+  url4: https://one-stand.oss-cn-shanghai.aliyuncs.com/one-stand/card/card4.png
+  url5: https://one-stand.oss-cn-shanghai.aliyuncs.com/one-stand/card/card5.png
+  url3: https://one-stand.oss-cn-shanghai.aliyuncs.com/one-stand/card/card3.png
+  url2: https://one-stand.oss-cn-shanghai.aliyuncs.com/one-stand/card/card2.png
+  url1: https://one-stand.oss-cn-shanghai.aliyuncs.com/one-stand/card/card1.png
+  url2back: https://one-stand.oss-cn-shanghai.aliyuncs.com/one-stand/card/card2back.png
+  logo_default: https://one-stand.oss-cn-shanghai.aliyuncs.com/one-stand/card/card_logo_default.png
+  goods_card: https://one-stand.oss-cn-shanghai.aliyuncs.com/one-stand/card/goods_card.png
+  goods_card_v2: https://one-stand.oss-cn-shanghai.aliyuncs.com/one-stand/card/bg_goods.png
+  label_goods: https://one-stand.oss-cn-shanghai.aliyuncs.com/one-stand/card/label_goods.png
+  bg_card_bottom: https://one-stand.oss-cn-shanghai.aliyuncs.com/one-stand/card/bg_card_bottom.png
+  white_backgroup_color: https://one-stand.oss-cn-shanghai.aliyuncs.com/one-stand/card/white-backgroup-color.png
+  background2: https://one-stand.oss-cn-shanghai.aliyuncs.com/yimai_photos/crm/dynamic-shard-background2.png
+  #分销背景
+  dstributionLogo: https://one-stand.oss-cn-shanghai.aliyuncs.com/one-stand/card/share_bg_default.png
+  clock_image_gb: https://one-stand.oss-cn-shanghai.aliyuncs.com/one-stand/card/clock_image_bg.png
+  clock_poster: https://one-stand.oss-cn-shanghai.aliyuncs.com/one-stand/card/clock_poster.png
+  poster_night: https://one-stand.oss-cn-shanghai.aliyuncs.com/yimai_photos/signIn/poster_night.png
+  poster_morning: https://one-stand.oss-cn-shanghai.aliyuncs.com/yimai_photos/signIn/poster_morning.png
+task:
+  core_pool_size: 5
+  max_pool_size: 10
+  queue_capacity: 20
+  name_prefix: task-service-
+  keep_alive_seconds: 50
+
+  #默认微信账号key
+config:
+  global_default_company_key: default_company_key
+  is_get_phone: is_get_phone
+
+#小程序extjson配置
+extjson:
+  uploadUrl: https://api.yiliit.com
+  baseUrl: https://api.yiliit.com
+  wssUrl: wss://socket.yiliit.com/ws
+  downloadFile: https://one-stand.oss-cn-shanghai.aliyuncs.com
+  location: https://restapi.amap.com
+
+
+test: test
+#获客文章h5模板地址 格式
+templateHtml: http://weixin.yiliit.com/
+#获客文章公众号appId
+appId: wx480d6e32370c91bc
+#腾讯地图定位
+mapKey: xxxxx
+#系统通知消息地址，走内网ip
+noticeUrl: http://127.0.0.1:8663/msg/msgHandler
+#默认公司ID 用于体验用户登录crm-pc
+defaultCompanyId: 1
